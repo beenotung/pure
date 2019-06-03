@@ -14,13 +14,15 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["pure.js"]
+      "all_frames": true,
+      "js": ["pure.js"],
+      "run_at": "document_end"
     }
   ],
 
   "browser_action": {
     "default_icon": "icons/pure-32.png",
-    "default_title": "Beastify",
+    "default_title": "Pure",
     "default_popup": "popup/pure.html"
   },
 
